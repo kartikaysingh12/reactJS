@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import ExpenseItem from './component/ExpenseItem';
-function App() {
+import ExpenseItem from './component/ExpensesJs/ExpenseItem';
+const App=()=> {
   const expenses=[
     {
-      id :"e1",title:"Car insurance", amount: 800, date:new Date(2022, 2 ,11)
+      id :"e1",title:"Car insurance", amount:800, date:new Date(2022, 2 ,11)
     },
     {
       id :"e2",title:"Electricity", amount: 1100, date:new Date(2022, 4 ,13)
