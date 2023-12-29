@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import ExpenseItem from './component/ExpensesJs/ExpenseItem';
-const App=()=> {
+const App=()=>
+ {
   const expenses=[
     {
       id :"e1",title:"Car insurance", amount:800, date:new Date(2022, 2 ,11)
@@ -12,8 +13,9 @@ const App=()=> {
     {
       id :"e3",title:"Home Renovation", amount: 1500, date:new Date(2022, 3 ,15)
     }
-
+  
   ]
+ 
   return (
     <div className="App">
       <header className="App-header">
