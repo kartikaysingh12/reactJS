@@ -1,12 +1,11 @@
+import React,{useState} from 'react';
 import '../ExpenseCss/ExpenseItem.css';
 import ExpenseDate from './ExpenseDate'
 import ExpenseDetails from './ExpenseDetails'
 const ExpenseItem=(props)=>{
-    // const expenseDate=new Date(2022, 2, 27);
-    // const expenseTitle="Car Insurance";
-    // const expenseAmount=295;
+   const [amount,setExpense]= useState(props.amount);
     const clicked=()=>{
-        alert ("deleting");
+        setExpense("100$");
     }
     return(<div className="expense-item">
         <div >
@@ -16,10 +15,10 @@ const ExpenseItem=(props)=>{
         <ExpenseDetails title={props.title}>
         </ExpenseDetails>
         <div className="expense-item__price">
-            <ExpenseDetails amount={props.amount}>
+            <ExpenseDetails amount={amount}>
                 </ExpenseDetails></div>
         </div>
-        <button onClick={clicked}>DELETE</button>
+        <button onClick={clicked}>Change</button>
     </div> 
     
     
