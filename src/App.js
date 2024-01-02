@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ExpenseItem from './component/ExpensesJs/ExpenseItem';
+import ExpenseForm from './component/ExpenseForm/ExpenseForm';
 const App=()=>
  {
   const expenses=[
@@ -23,6 +24,7 @@ const App=()=>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <ExpenseForm/>
         <ExpenseItem 
         title={expenses[0].title} 
         amount={expenses[0].amount}
