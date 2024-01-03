@@ -2,6 +2,7 @@
 import './App.css';
 import ExpenseItem from './component/ExpensesJs/ExpenseItem';
 import ExpenseForm from './component/ExpenseForm/ExpenseForm';
+
 const App=()=>
  {
   const expenses=[
@@ -26,6 +27,7 @@ const App=()=>
       <header className="App-header">
         
         <ExpenseForm onAddExpense={addExpenseHandler}/>
+        
         <ExpenseItem 
         title={expenses[0].title} 
         amount={expenses[0].amount}
