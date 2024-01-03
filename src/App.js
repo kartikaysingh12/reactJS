@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ExpenseItem from './component/ExpensesJs/ExpenseItem';
 import ExpenseForm from './component/ExpenseForm/ExpenseForm';
@@ -16,15 +16,16 @@ const App=()=>
     }
   
   ]
+  const addExpenseHandler=(expense)=>{
+    console.log('In App.js');
+    console.log(expense);
+  }
  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <ExpenseForm/>
+        
+        <ExpenseForm onAddExpense={addExpenseHandler}/>
         <ExpenseItem 
         title={expenses[0].title} 
         amount={expenses[0].amount}
@@ -40,14 +41,7 @@ const App=()=>
         amount={expenses[2].amount}
         date={expenses[2].date}>
         </ExpenseItem>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </header>
     </div>
   );
